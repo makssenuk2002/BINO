@@ -6,33 +6,32 @@
   height: 100%;
 
 }
-
-@media(max-width:1400px){
-  .container{
-    max-width: 1190px;
-  }
-  .header .content{
-    margin-left: -100px;
-  }
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+  position: absolute;
+  display: none;
+  left: 800px;
+  top: 38px;
+  margin-top: 50px;
+  height: 2px;
+  width: 80px;
+  position: absolute;
+  background: #a1e2ee;
+  /* margin: 0 auto; */
+  /* margin-top: 100px; */
+}
+.menu-burger__header span{
+  top: 21px;
+}
+.menu-burger__header:after, .menu-burger__header:before{
+  content: '';
+}
+.menu-burger__header:after{
+  bottom: 5px;
+}
+.menu-burger__header:before{
+  top: 5px;
 }
 
-@media(max-width:1200px){
-  .container{
-    max-width: 970px;
-  }
-}
-
-@media(max-width:992px){
-  .container{
-    max-width: 750px;
-  }
-}
-
-@media(max-width:767px){
-  .container{
-    max-width: none;
-  }
-}
 
 .wrap {
   position: relative;
@@ -95,7 +94,7 @@
   margin-top: 200px;
 }
 
-.header .content .headerh1 {
+.header .content h1 {
   font-size: 50px;
   letter-spacing: 7px;
   color: #f4f5f9;
@@ -159,13 +158,14 @@
   background-color: #e74c3c;
  
 }
-.ourblog .row{
-  margin-left: auto;
+.ourblog .row1{
+  width: 100%;
+  margin:0 auto;
 }
 
 .ourblog{
   position: relative;
-  width: 100%;
+  max-width: 100%;
   min-height: 1800px;
   align-items: center;
   display: block;
@@ -176,9 +176,11 @@
   text-align: center;
 
 } 
-.ourblog .content .img img{
-  width: 474px;
-  min-height:474px;
+.ourblog .content .img{
+  width:474px;
+  height:474px;
+  margin: 0;
+  float: left;
 }
 .ourblog .content .img{
   padding: 0;
@@ -190,13 +192,13 @@
 
   background-color: #e74e3e;
   width: 474px;
-  min-height:474px;
+  height:374px;
   padding: 0;
   margin: 0;
 }
 .ourblog .content{
   margin-top: 50px;
-  width: 1897px;
+  max-width: 1897px;
   margin: 0 auto;
   margin-top: 50px;
 
@@ -246,20 +248,19 @@
 }
 
 .ourblog .content .feedback{
-  min-height: 511px;
+  height: 611px;
   
   background: url(/img/ourblog.png)no-repeat;
   -moz-background-size: 100%;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
-  width: 100%;
-  /* width: 1909px; */
+  
   margin-left: 0;
 
 }
 .ourblog .content .feedback .row{
-  padding-top: 150px;
+  padding-top: 100px;
   
 }
 .ourblog .content .feedback .row .icon{
@@ -269,25 +270,27 @@
   margin-top: 30px;
   font-size: 30px;
   letter-spacing: 2px;
-  line-min-height: 30px;
+  min-height: 30px;
   color: #f4f5f9;
   font-weight: 700;
   font-family: "Source Sans Pro";
 }
 .cont{
   position: relative;
-  min-height: 609px;
+  min-height: 481px;
+  /* width: 25%; */
   float: left;
   margin: 50px 0 0  30px;
   padding-left: 50px;
   
 
 }
+
 .ourpricing{
   min-height: 800px;
 }
 .ourpricing .cont {
-  width: 30%;
+  /* width: 30%; */
   margin: 0;
 }
 .ourpricing .cont .top{
@@ -303,6 +306,13 @@
   text-align: center;
   padding-top: 100px;
 
+}
+.ourpricing .wrap .head{
+  margin-bottom: 50px;
+}
+.ourpricing .wrap{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .ourpricing .cont .circl{
   position: absolute;
@@ -402,13 +412,20 @@
   min-height: 900px;
   margin-top: 100px;
 }
+.row1{
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 .keep .info{
 
   filter: drop-shadow(0px 3px 2.5px rgba(0,0,0,0.1));
-
-  margin-top: 20px;
+  float: left;
   padding: 100px 50px 50px 100px;
   background-color: #ffffff;
+  width: 30%;
+  margin-left: -200px;
+  height: 600px;
 
   
 }
@@ -417,8 +434,12 @@
   min-height: 600px;
   background-color: #ffffff;
   filter: drop-shadow(0px 5px 2.5px rgba(0,0,0,0.1));
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 200px;
+  
+  height: 600px;
+  width: 70%;
+
+
 
 
 }
@@ -590,17 +611,270 @@ footer p{
 .ourteam .text p{
 font-size: 14px;
 letter-spacing: 1px;
-line-min-height: 24px;
+min-height: 24px;
 color: #ffffff;
 font-weight: 400;
 font-family: "Source Sans Pro";
 }
 
 
-@media (max-width:1200px) {
+@media(max-width:1400px){
   .container{
-    min-width: 900px;
-  color: red;
-
+    max-width: 1190px;
+  }
+  .header .content{
+    margin-left: -100px;
   }
 }
+
+@media(max-width:1200px){
+  .container{
+    max-width: 970px;
+    
+  }
+  .header .content{
+    margin-left: -150px;
+  }
+  .header .content .subheader{
+    font-size: 18px;
+  }
+  
+}
+
+@media(max-width:992px){
+  .container{
+    max-width: 750px;
+  }
+  .header .content{
+    margin-left: -300px;
+  }
+  .ourblog .content{
+    max-width: 990px;
+  }
+  .header .content .menu{
+    display: none;
+  }
+  .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+    display: block;
+  }
+  .ourblog .content .feedback {
+
+    width: 1200px;
+    height: 500px;
+  }
+  .ourblog .content .feedback .icon{
+    margin-top: 100px;
+
+  }
+
+  
+  .container{
+    max-width: none;
+
+  }
+  .header .content{
+    margin-left: -300px;
+  }
+  .header .content h1{
+    font-size: 100px;
+  }
+  .header .content .upheader{
+    font-size: 40px;
+  }
+  .header .content .subheader{
+    width: 800px;
+    font-size: 25px;
+  }
+  .header .content button{
+    width: 300px;
+    min-height: 80px;
+    font-size: 20px;
+  }
+  .ourblog .content .feedback{
+    /* width: 96%; */
+    margin-left: -98px;
+    height: 500px;
+  }
+  .ourblog .content .feedback .info{
+    display: none;
+  }
+  .ourblog .content .feedback .icon{
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  .ourblog .row{
+    width: 1250px;
+    /* margin: 0 auto; */
+    margin-left: -100px;
+  }
+  .ourblog .row .img{
+    width: 600px;
+    height: 600px;
+  }
+  .ourblog .content h5{
+    font-size: 25px;
+
+  }
+  .ourpricing .cont{
+    /* width: 33%; */
+    margin: 0 auto;
+
+  }
+  .ourblog .row img{
+    width: 600px;
+    height: 600px;
+  }
+  .ourblog .row .cont{
+    width: 600px;
+    height: 600px;
+  }
+  .ourblog .content h2{
+    font-size: 50px;
+  }
+  .ourblog .content p{
+    font-size: 25px;
+
+  }
+  .ourblog .row .icon img{
+    width: 100px;
+    height: 100px;
+  }
+  .ourblog .content .feedback .icons{
+    width: 900px;
+    margin: 0 auto;
+  }
+  footer i{
+    padding: 15px;
+    width: 30px;
+    
+  }
+  footer .icons{
+    margin-left: -200px;
+
+  }
+  footer p{
+    font-size: 25px;
+    left: 500px;
+    width: 500px;
+  }
+  footer .container{
+    width: 1200px;
+  }
+  
+
+}
+
+@media(max-width:769px){
+  .ourblog .content .feedback{
+    display: none;
+  }
+  .ourpricing .cont .top{
+    margin: 0 auto;
+    min-width: 500px;
+    margin-top: 30px;
+  }
+  .ourpricing .cont .circl{
+    margin: 0 auto;
+    left: 540px;
+  }
+  .ourpricing .cont .bot{
+    margin: 0 auto;
+    min-width: 500px;
+    
+  }
+  .ourpricing .cont .bot p{
+    font-size: 20px;
+  }
+  .ourpricing .cont .bot button{
+    width: 250px;
+    height: 60px;
+  }
+}
+
+@media(max-width:576px){
+  .wrap{
+    width: 600px;
+  }
+  .container{
+    max-width: 750px;
+  }
+  .header .content{
+    margin-left: -300px;
+  }
+  .ourblog .content{
+    max-width: 990px;
+  }
+  .header .content button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .header .content .icon{
+    position: unset;
+    margin-top: 50px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    width: 200px;
+
+  }
+  .header .content .icon img{
+    width: 250px;
+  }
+  .header .content .icon{
+    margin-top: 100px;
+    margin-left: 430px;
+  }
+  .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+    margin-left: -300px;
+    margin-top: 20px;
+  }
+  .header .content h1{
+    color: black;
+    font-size: 40px;
+    /* margin: 0 auto; */
+    margin-left: -50px;
+
+  }
+  .header .divider{
+    color: black;
+    margin-left: -40px;
+
+  }
+  .header .content .upheader{
+    font-size: 30px;
+    color: black;
+    margin-left: -77px;
+    
+  }
+  .header .content{
+    width: 600px;
+  }
+  .header .content .subheader{
+    width: 400px;
+    margin-left: 350px;
+    margin-top: 50px;
+  }
+  .header .content button{
+    margin-left: 400px;
+  }
+  .ourblog .row{
+    width: 600px;
+  }
+
+  .ourblog .row .img{
+    margin-left: 100px;
+    width: 300px;
+  }
+  .ourblog .row .cont{
+    margin-left: 100px;
+
+  }
+  .ourpricing .cont .circl{
+    left: 229px;
+  }
+  .header .title{
+    margin-left: 380px;
+    width: 400px;
+  }
+}
+
